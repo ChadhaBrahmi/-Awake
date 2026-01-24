@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>!awake — Dream to Story</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="!Awake.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+
+  
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-purple-600/30 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+  </div>
+
+  
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+
+
+      <span class="font-semibold tracking-wide"></span>
+    </div>
+    <nav class="text-sm text-slate-300 flex gap-6">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#how" class="hover:text-white">How it works</a>
+      <a href="#demo" class="hover:text-white">Demo</a>
+      <a href="#footer" class="hover:text-white">Contact</a>
+    </nav>
+  </header>
+
+  
+  <section class="max-w-6xl mx-auto px-6 pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+        Turn <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">dream fragments</span><br />
+        into full stories.
+      </h1>
+      <p class="mt-6 text-slate-300 max-w-xl">
+        <span class="font-semibold text-white">!awake</span> is an experimental AI storytelling project that transforms short dream descriptions into complete narrative stories.
+      </p>
+      <div class="mt-8 flex gap-4">
+        <a href="#demo" class="px-6 py-3 rounded-xl bg-white text-slate-900 font-semibold hover:bg-slate-200 transition">Try the demo</a>
+        <a href="#about" class="px-6 py-3 rounded-xl border border-white/20 hover:bg-white/5 transition">Learn more</a>
+      </div>
+    </div>
+
+    
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur">
+      <div class="text-sm text-slate-400 mb-2">Example input</div>
+      <div class="p-4 rounded-xl bg-slate-900/60 text-slate-200 text-sm">
+        "I was walking in a city made of mirrors and one of them started talking to me."
+      </div>
+      <div class="text-sm text-slate-400 mt-4 mb-2">Example output</div>
+      <div class="p-4 rounded-xl bg-slate-900/60 text-slate-300 text-sm leading-relaxed">
+        The city shimmered like a thousand fractured suns. Every step echoed back at me from a hundred directions, until one reflection refused to stay silent and began to speak...
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-6">About the project</h2>
+    <p class="text-slate-300 max-w-3xl">
+      !awake explores how language models can expand minimal human input into structured, imaginative output. You give a short dream idea, and the system tries to grow it into a full narrative. This is both a creative experiment and a learning project focused on understanding machine learning and generative models from the ground up.
+    </p>
+  </section>
+
+  
+ <section id="how" class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-10">How does it work?</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+      <div class="text-xl font-semibold mb-2">1. You write a dream</div>
+      <p class="text-slate-300 text-sm">
+        You describe your dream in one or two sentences. It can be short, strange, or incomplete.
+      </p>
+    </div>
+
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+      <div class="text-xl font-semibold mb-2">2. !awake interprets it</div>
+      <p class="text-slate-300 text-sm">
+        The AI reads your idea and uses a language model trained on stories to understand the mood, setting, and meaning.
+      </p>
+    </div>
+
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+      <div class="text-xl font-semibold mb-2">3. It writes the story</div>
+      <p class="text-slate-300 text-sm">
+        The model expands your dream into a full narrative with atmosphere, details, and a proper ending.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  
+  <section id="demo" class="max-w-3xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-6">Demo (UI mockup)</h2>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+      <textarea placeholder="Describe your dream in one or two sentences..." class="w-full h-28 bg-slate-900/60 border border-white/10 rounded-xl p-4 text-slate-100 placeholder:text-slate-500 focus:outline-none"></textarea>
+      <button class="mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold text-slate-900 hover:opacity-90 transition">
+        Generate story
+      </button>
+      <div class="mt-6 p-4 rounded-xl bg-slate-900/60 text-slate-400 text-sm">
+        The generated story will appear here...
+      </div>
+    </div>
+  </section>
+
+  
+<section id="contact" class="max-w-6xl mx-auto px-6 py-24 text-center">
+  <h2 class="text-3xl font-bold mb-12">Get in Touch</h2>
+
+  <div class="flex justify-center gap-8 flex-wrap">
+
+   
+<button
+  onclick="copyEmail()"
+  class="group relative w-20 h-20 bg-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+  title="Copy email"
+>
+ 
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20 4H4C2.895 4 2 4.895 2 6v12c0 1.105.895 2 2 2h16c1.105 0 2-.895 2-2V6c0-1.105-.895-2-2-2zm0 2v.511l-8 5.01-8-5.01V6h16zM4 18V8.489l7.555 4.722a1 1 0 0 0 1.11 0L20 8.489V18H4z"/>
+  </svg>
+  <span class="sr-only">Email</span>
+</button>
+
+
+  
+    <a
+      href="https://github.com/ChadhaBrahmi"
+      target="_blank"
+      class="group relative w-20 h-20 bg-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.74-1.34-1.74-1.1-.75.08-.73.08-.73 1.21.09 1.85 1.25 1.85 1.25 1.08 1.84 2.83 1.31 3.52 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.42 11.42 0 013-.41c1.02.01 2.05.14 3 .41 2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.47 5.93.43.37.81 1.11.81 2.24v3.33c0 .32.22.69.82.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+      </svg>
+      <span class="sr-only">GitHub</span>
+    </a>
+
+
+    <a
+      href="https://www.instagram.com/ch_an_brh?igsh=MXZuMWluNWFrazJlaA=="
+      target="_blank"
+      class="group relative w-20 h-20 bg-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.963.24 2.423.404a4.92 4.92 0 011.77 1.03 4.92 4.92 0 011.03 1.77c.164.46.348 1.253.404 2.423.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.963-.404 2.423a4.92 4.92 0 01-1.03 1.77 4.92 4.92 0 01-1.77 1.03c-.46.164-1.253.348-2.423.404-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.963-.24-2.423-.404a4.92 4.92 0 01-1.77-1.03 4.92 4.92 0 01-1.03-1.77c-.164-.46-.348-1.253-.404-2.423C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.963.404-2.423a4.92 4.92 0 011.03-1.77 4.92 4.92 0 011.77-1.03c.46-.164 1.253-.348 2.423-.404C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.012 7.052.07 5.777.127 4.74.305 3.9.63a7.116 7.116 0 00-2.57 1.658A7.116 7.116 0 00.63 4.86c-.324.84-.503 1.877-.56 3.152C.012 8.332 0 8.736 0 12s.012 3.668.07 4.948c.057 1.275.236 2.312.56 3.152a7.116 7.116 0 001.658 2.57 7.116 7.116 0 002.57 1.658c.84.324 1.877.503 3.152.56C8.332 23.988 8.736 24 12 24s3.668-.012 4.948-.07c1.275-.057 2.312-.236 3.152-.56a7.116 7.116 0 002.57-1.658 7.116 7.116 0 001.658-2.57c.324-.84.503-1.877.56-3.152C23.988 15.668 24 15.264 24 12s-.012-3.668-.07-4.948c-.057-1.275-.236-2.312-.56-3.152a7.116 7.116 0 00-1.658-2.57A7.116 7.116 0 0020.1.63c-.84-.324-1.877-.503-3.152-.56C15.668.012 15.264 0 12 0z"/>
+        <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zM18.406 4.594a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+      </svg>
+      <span class="sr-only">Instagram</span>
+    </a>
+
+  </div>
+</section>
+
+<script>
+  function copyEmail() {
+    const email = "chadhabrahmi01@gmail.com";
+    navigator.clipboard.writeText(email);
+    alert("Email copied to clipboard!");
+  }
+</script>
+
+  <footer id="footer" class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-slate-400 text-sm">© 2026 !awake — Made By Chadha Brahmi</div>
+    </div>
+  </footer>
+
+</body>
+</html>
