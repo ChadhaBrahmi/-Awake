@@ -101,18 +101,18 @@
   </div>
 </section>
 
-
   
   <section id="demo" class="max-w-3xl mx-auto px-6 py-20">
     <h2 class="text-3xl font-bold mb-6">Demo (UI mockup)</h2>
     <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
-      <textarea placeholder="Describe your dream in one or two sentences..." class="w-full h-28 bg-slate-900/60 border border-white/10 rounded-xl p-4 text-slate-100 placeholder:text-slate-500 focus:outline-none"></textarea>
-      <button class="mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold text-slate-900 hover:opacity-90 transition">
+      <textarea  id="dreamInput" placeholder="Describe your dream in one or two sentences..." class="w-full h-28 bg-slate-900/60 border border-white/10 rounded-xl p-4 text-slate-100 placeholder:text-slate-500 focus:outline-none"></textarea>
+      <button id="generateBtn"class="mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold text-slate-900 hover:opacity-90 transition">
         Generate story
       </button>
-      <div class="mt-6 p-4 rounded-xl bg-slate-900/60 text-slate-400 text-sm">
-        The generated story will appear here...
-      </div>
+      <div id="storyOutput" class="mt-6 p-4 rounded-xl bg-slate-900/60 text-slate-400 text-sm">
+    The generated story will appear here...
+</div>
+
     </div>
   </section>
 
@@ -135,8 +135,6 @@
   <span class="sr-only">Email</span>
 </button>
 
-
-  
     <a
       href="https://github.com/ChadhaBrahmi"
       target="_blank"
@@ -171,6 +169,34 @@
     alert("Email copied to clipboard!");
   }
 </script>
+
+<script>
+const generateBtn = document.getElementById("generateBtn");
+const dreamInput = document.getElementById("dreamInput");
+const storyOutput = document.getElementById("storyOutput");
+
+const COLAB_API_URL = "https://yesenia-unsportive-dooly.ngrok-free.dev/run";  
+
+generateBtn.addEventListener("click", async () => {
+  const dreamText = dreamInput.value;
+  storyOutput.innerText = "Generating story...";
+
+  try {
+    const res = await fetch(COLAB_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ dream: dreamText })
+    });
+    const data = await res.json();
+    storyOutput.innerText = data.story; 
+  } catch (err) {
+    storyOutput.innerText = "Backend not connected yet!";
+    console.error(err);
+  }
+}); 
+
+</script>
+
 
   <footer id="footer" class="border-t border-white/10">
     <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
