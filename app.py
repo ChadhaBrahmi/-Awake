@@ -9,13 +9,9 @@ from google.adk.sessions import InMemorySessionService
 from google.genai import types
 
 
-# ------------------ Flask setup ------------------
-
 app = Flask(__name__)
 CORS(app)
 
-
-# ------------------ Google / ADK setup ------------------
 
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 
